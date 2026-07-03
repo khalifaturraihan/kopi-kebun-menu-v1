@@ -1,0 +1,65 @@
+.footer {
+  position: relative;
+  background: radial-gradient(120% 90% at 50% 0%, #418a59 0%, #2c5a3c 55%, #1e3b28 100%);
+  color: #e7e0cb;
+  text-align: center;
+  padding: 56px 28px 46px;
+  overflow: hidden;
+}
+
+.halo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(150, 180, 110, 0.16), transparent 65%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 6px;
+}
+
+.farewell {
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #bcc7ab;
+  margin: 8px auto 0;
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0 16px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a9783c;
+}
+
+.handle {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8ca07d;
+}

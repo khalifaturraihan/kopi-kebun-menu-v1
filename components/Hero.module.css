@@ -1,0 +1,233 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 660px;
+  overflow: hidden;
+  background: radial-gradient(130% 92% at 50% 6%, #418a59 0%, #357049 50%, #1e3b28 100%);
+}
+
+.glow {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  margin-left: -170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(150, 180, 110, 0.22), transparent 64%);
+  pointer-events: none;
+}
+
+.spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 240px at var(--mx, 50%) var(--my, 30%),
+    rgba(180, 150, 80, 0.18),
+    transparent 66%
+  );
+}
+
+.leaf {
+  position: absolute;
+  top: 0;
+  border-radius: 0 80% 0 80%;
+}
+
+.leaf1 {
+  left: 12%;
+  width: 13px;
+  height: 13px;
+  background: rgba(140, 170, 110, 0.5);
+  --r: 10deg;
+}
+
+.leaf2 {
+  left: 33%;
+  width: 9px;
+  height: 9px;
+  background: rgba(120, 150, 95, 0.45);
+  --r: -20deg;
+}
+
+.leaf3 {
+  left: 64%;
+  width: 15px;
+  height: 15px;
+  background: rgba(150, 180, 115, 0.4);
+  --r: 30deg;
+}
+
+.leaf4 {
+  left: 83%;
+  width: 10px;
+  height: 10px;
+  background: rgba(130, 160, 100, 0.5);
+  --r: -12deg;
+}
+
+.topBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+}
+
+.topLogo {
+  width: 40px;
+  height: 40px;
+  opacity: 0.95;
+}
+
+.topLabel {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.34em;
+  color: #bcd0a8;
+  text-transform: uppercase;
+}
+
+.center {
+  position: absolute;
+  top: 11%;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beanWrap {
+  position: relative;
+}
+
+.steam {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 5px;
+  height: 52px;
+  border-radius: 3px;
+  filter: blur(2px);
+}
+
+.steam1 {
+  margin-left: -9px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+}
+
+.steam2 {
+  margin-left: 5px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.4));
+}
+
+.bean {
+  width: 72px;
+  height: auto;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45)) brightness(1.75) saturate(0.7);
+}
+
+.eyebrow {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.42em;
+  color: #bcd0a8;
+  text-transform: uppercase;
+  margin-top: 18px;
+}
+
+.wordmark {
+  font-family: var(--font-fraunces), serif;
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 0.88;
+  color: #f3ecdb;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: -1px;
+}
+
+.tagline {
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  color: #cdd8bf;
+  margin-top: 16px;
+  text-align: center;
+  max-width: 250px;
+  line-height: 1.4;
+}
+
+.drinkWrap {
+  position: absolute;
+  bottom: 78px;
+  left: 50%;
+  width: 320px;
+  height: 420px;
+  margin-left: -160px;
+}
+
+.drink {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 0;
+  filter: drop-shadow(0 24px 26px rgba(0, 0, 0, 0.5));
+}
+
+.drinkShadow {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  width: 170px;
+  height: 28px;
+  margin-left: -85px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.5), transparent 70%);
+  filter: blur(4px);
+}
+
+.cue {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 26px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cueLabel {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.34em;
+  color: #cdd8bf;
+  text-transform: uppercase;
+}
+
+.cueChevron {
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #cdd8bf;
+  border-bottom: 2px solid #cdd8bf;
+  transform: rotate(45deg);
+}

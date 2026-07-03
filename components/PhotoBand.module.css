@@ -1,0 +1,64 @@
+.band {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+  background: #2c5a3c;
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #1e3b28 0%,
+    rgba(30, 59, 40, 0.25) 30%,
+    rgba(30, 59, 40, 0.4) 60%,
+    #1e3b28 100%
+  );
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 26px 42px;
+  color: #f3ecdb;
+}
+
+.eyebrow {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.34em;
+  color: #bcd0a8;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-fraunces), serif;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 0.95;
+  margin: 12px 0 0;
+  letter-spacing: -1px;
+}
+
+.subcopy {
+  font-family: var(--font-fraunces), serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #cdd8bf;
+  margin-top: 14px;
+  max-width: 280px;
+  line-height: 1.45;
+}

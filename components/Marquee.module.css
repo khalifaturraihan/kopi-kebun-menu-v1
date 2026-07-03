@@ -1,0 +1,25 @@
+.strip {
+  background: #2c5a3c;
+  overflow: hidden;
+  padding: 15px 0;
+  border-top: 1px solid rgba(169, 120, 60, 0.35);
+  border-bottom: 1px solid rgba(169, 120, 60, 0.35);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.text {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f3ecdb;
+  padding-right: 34px;
+  white-space: pre;
+}

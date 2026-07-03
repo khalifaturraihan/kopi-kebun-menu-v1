@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0d1812;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+#kk-nav{scrollbar-width:none}#kk-nav::-webkit-scrollbar{display:none}
+@keyframes kk-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.055)}}
+@keyframes kk-leaf{0%{transform:translateY(-40px) rotate(var(--r,0deg));opacity:0}12%{opacity:.7}88%{opacity:.45}100%{transform:translateY(680px) rotate(calc(var(--r,0deg) + 140deg));opacity:0}}
+@keyframes kk-steam{0%{transform:translateY(0) scaleX(1);opacity:0}25%{opacity:.5}100%{transform:translateY(-95px) scaleX(1.8);opacity:0}}
+@keyframes kk-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes kk-floatsoft{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@keyframes kk-glow{0%,100%{opacity:.4}50%{opacity:.85}}
+@keyframes kk-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes kk-pan{0%{transform:scale(1.1)}100%{transform:scale(1.24)}}
+@keyframes kk-bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
+@keyframes kk-fade{0%,100%{opacity:0}8%,42%{opacity:1}50%{opacity:0}}
+</style>
+</helmet>
+
+<div id="kk-root" style="max-width:520px;margin:0 auto;background:#f3ecdb;color:#1c3026;position:relative;overflow-x:hidden;min-height:100vh;box-shadow:0 0 70px rgba(0,0,0,0.5);">
+
+  <!-- ===================== HERO — KEBUN HIDUP ===================== -->
+  <header id="kk-hero" style="position:relative;height:100vh;min-height:660px;overflow:hidden;background:radial-gradient(130% 92% at 50% 6%,#23402c 0%,#162a1d 50%,#0d1812 100%);">
+    <div id="kk-glow" style="position:absolute;top:4%;left:50%;width:340px;height:340px;margin-left:-170px;border-radius:50%;background:radial-gradient(circle,rgba(150,180,110,0.22),transparent 64%);animation:kk-glow 6s ease-in-out infinite;pointer-events:none;"></div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle 240px at var(--mx,50%) var(--my,30%),rgba(180,150,80,0.18),transparent 66%);"></div>
+
+    <!-- falling leaves -->
+    <div class="kk-par" data-depth="22" style="position:absolute;left:12%;top:0;width:13px;height:13px;border-radius:0 80% 0 80%;background:rgba(140,170,110,0.5);--r:10deg;animation:kk-leaf 10s linear infinite;"></div>
+    <div class="kk-par" data-depth="34" style="position:absolute;left:33%;top:0;width:9px;height:9px;border-radius:0 80% 0 80%;background:rgba(120,150,95,0.45);--r:-20deg;animation:kk-leaf 12s linear infinite 2s;"></div>
+    <div class="kk-par" data-depth="16" style="position:absolute;left:64%;top:0;width:15px;height:15px;border-radius:0 80% 0 80%;background:rgba(150,180,115,0.4);--r:30deg;animation:kk-leaf 11s linear infinite 1s;"></div>
+    <div class="kk-par" data-depth="28" style="position:absolute;left:83%;top:0;width:10px;height:10px;border-radius:0 80% 0 80%;background:rgba(130,160,100,0.5);--r:-12deg;animation:kk-leaf 13s linear infinite 3.5s;"></div>
+
+    <!-- header bar -->
+    <div style="position:absolute;top:0;left:0;right:0;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;">
+      <img src="img/logo-cream.webp" alt="Kopi Kebun" style="width:40px;height:40px;opacity:.95;">
+      <span style="font:500 10px/1 'Oswald',sans-serif;letter-spacing:0.34em;color:#bcd0a8;text-transform:uppercase;">Bintaro</span>
+    </div>
+
+    <!-- bean + wordmark -->
+    <div class="kk-par" data-depth="-10" style="position:absolute;top:11%;left:0;right:0;z-index:4;display:flex;flex-direction:column;align-items:center;">
+      <div style="position:relative;">
+        <div style="position:absolute;left:50%;top:-4px;width:5px;height:52px;margin-left:-9px;border-radius:3px;background:linear-gradient(transparent,rgba(255,255,255,0.5));filter:blur(2px);animation:kk-steam 4s ease-out infinite;"></div>
+        <div style="position:absolute;left:50%;top:-4px;width:5px;height:52px;margin-left:5px;border-radius:3px;background:linear-gradient(transparent,rgba(255,255,255,0.4));filter:blur(2px);animation:kk-steam 4.6s ease-out infinite 1.2s;"></div>
+        <img src="img/logo-bean.webp" alt="" style="width:72px;height:auto;animation:kk-breathe 5s ease-in-out infinite;filter:drop-shadow(0 6px 14px rgba(0,0,0,0.45)) brightness(1.75) saturate(.7);">
+      </div>
+      <div style="font:600 11px/1 'Oswald',sans-serif;letter-spacing:0.42em;color:#bcd0a8;text-transform:uppercase;margin-top:18px;">Est · Kebun Kota</div>
+      <div style="font-family:'Fraunces',serif;font-weight:500;font-size:62px;line-height:0.88;color:#f3ecdb;text-align:center;margin-top:10px;letter-spacing:-1px;">Kopi<br>Kebun</div>
+      <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:15px;color:#cdd8bf;margin-top:16px;text-align:center;max-width:250px;line-height:1.4;">Secangkir tenang di tengah kebun kota — diseduh perlahan, dinikmati tanpa terburu.</div>
+    </div>
+
+    <!-- floating drink crossfade -->
+    <div class="kk-par" data-depth="40" style="position:absolute;bottom:78px;left:50%;width:320px;height:420px;margin-left:-160px;">
+      <img class="kk-hero-drink" src="img/signature.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;opacity:0;animation:kk-fade 13.5s ease-in-out infinite 0s,kk-float 6s ease-in-out infinite;filter:drop-shadow(0 24px 26px rgba(0,0,0,0.5));">
+      <img class="kk-hero-drink" src="img/mocktail.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;opacity:0;animation:kk-fade 13.5s ease-in-out infinite -4.5s,kk-float 6s ease-in-out infinite;filter:drop-shadow(0 24px 26px rgba(0,0,0,0.5));">
+      <img class="kk-hero-drink" src="img/coffeelatte.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;opacity:0;animation:kk-fade 13.5s ease-in-out infinite -9s,kk-float 6s ease-in-out infinite;filter:drop-shadow(0 24px 26px rgba(0,0,0,0.5));">
+      <div style="position:absolute;bottom:-8px;left:50%;width:170px;height:28px;margin-left:-85px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,0.5),transparent 70%);filter:blur(4px);"></div>
+    </div>
+
+    <!-- scroll cue -->
+    <div style="position:absolute;left:0;right:0;bottom:26px;z-index:6;display:flex;flex-direction:column;align-items:center;gap:8px;animation:kk-bob 2.2s ease-in-out infinite;">
+      <span style="font:600 10px/1 'Oswald',sans-serif;letter-spacing:0.34em;color:#cdd8bf;text-transform:uppercase;">Daftar Menu</span>
+      <span style="width:9px;height:9px;border-right:2px solid #cdd8bf;border-bottom:2px solid #cdd8bf;transform:rotate(45deg);"></span>
+    </div>
+  </header>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div style="background:#16241c;overflow:hidden;padding:15px 0;border-top:1px solid rgba(169,120,60,0.35);border-bottom:1px solid rgba(169,120,60,0.35);">
+    <div style="display:flex;width:max-content;animation:kk-marquee 32s linear infinite;will-change:transform;">
+      <span style="font:600 13px/1 'Oswald',sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#f3ecdb;padding-right:34px;">{{ marquee }}</span>
+      <span aria-hidden="true" style="font:600 13px/1 'Oswald',sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#f3ecdb;padding-right:34px;">{{ marquee }}</span>
+    </div>
+  </div>
+
+  <!-- ===================== STICKY NAV ===================== -->
+  <nav id="kk-nav-wrap" style="position:sticky;top:0;z-index:50;background:rgba(243,236,219,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(44,74,55,0.14);">
+    <div id="kk-nav" style="display:flex;gap:7px;overflow-x:auto;padding:11px 16px;">
+      <sc-for list="{{ navItems }}" as="np" hint-placeholder-count="8">
+        <button type="button" data-cat="{{ np.id }}" onClick="{{ go }}" style="{{ np.pillStyle }}">{{ np.name }}</button>
+      </sc-for>
+    </div>
+  </nav>
+
+  <!-- ===================== SIGNATURE FEATURE SPREAD ===================== -->
+  <section data-sec="signature" style="position:relative;height:560px;overflow:hidden;background:#16241c;">
+    <div style="position:absolute;top:8%;left:50%;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:radial-gradient(circle,rgba(150,180,110,0.20),transparent 64%);"></div>
+    <img id="kk-sig-photo" src="img/signature.webp" alt="Signature" style="position:absolute;top:4%;left:50%;width:260px;height:auto;transform:translateX(-50%);object-fit:contain;filter:drop-shadow(0 24px 28px rgba(0,0,0,0.5));animation:kk-floatsoft 6.5s ease-in-out infinite;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,24,18,0) 0%,rgba(13,24,18,0) 44%,rgba(13,24,18,0.78) 72%,#0d1812 100%);"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;padding:0 26px 40px;color:#f3ecdb;">
+      <div style="font:600 11px/1 'Oswald',sans-serif;letter-spacing:0.34em;color:#bcd0a8;text-transform:uppercase;">No. 01 — Speciality</div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:52px;line-height:0.92;margin:12px 0 0;letter-spacing:-1px;">Signature</h2>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;">
+        <sc-for list="{{ signatureItems }}" as="it" hint-placeholder-count="2">
+          <div style="display:flex;align-items:baseline;gap:12px;">
+            <span style="font:600 16px/1.3 'DM Sans',sans-serif;color:#f3ecdb;">{{ it.name }}</span>
+            <span style="flex:1;border-bottom:1px dotted rgba(243,236,219,0.4);transform:translateY(-4px);"></span>
+            <span style="font:600 16px/1 'Oswald',sans-serif;color:#e0b27a;letter-spacing:0.03em;">{{ it.price }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#cdd8bf;margin-top:20px;max-width:300px;line-height:1.45;">Gula aren asli & pandan segar — resep rumah yang paling dicari.</div>
+    </div>
+  </section>
+
+  <!-- ===================== DRINKS ===================== -->
+  <main style="background:#f3ecdb;">
+    <sc-for list="{{ drinks }}" as="cat" hint-placeholder-count="7">
+      <section data-sec="{{ cat.id }}" style="position:relative;overflow:hidden;padding:46px 24px 32px;border-top:1px solid rgba(44,74,55,0.10);">
+        <span style="position:absolute;top:-6px;right:14px;font-family:'Fraunces',serif;font-weight:600;font-size:120px;line-height:1;color:rgba(169,120,60,0.12);pointer-events:none;">{{ cat.num }}</span>
+        <div style="position:relative;z-index:2;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:34px;line-height:1;margin:0;color:#16241c;letter-spacing:-0.5px;">{{ cat.name }}</h2>
+            <sc-if value="{{ cat.isNew }}" hint-placeholder-val="{{ false }}">
+              <span style="font:600 9px/1 'Oswald',sans-serif;letter-spacing:0.14em;color:#f3ecdb;background:#a9783c;padding:4px 8px;border-radius:3px;text-transform:uppercase;">Baru</span>
+            </sc-if>
+          </div>
+          <sc-if value="{{ cat.note }}" hint-placeholder-val="{{ false }}">
+            <p style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#5e7a5f;margin:8px 0 0;">{{ cat.note }}</p>
+          </sc-if>
+
+          <sc-if value="{{ cat.photo }}" hint-placeholder-val="{{ false }}">
+            <div style="position:relative;display:flex;justify-content:center;margin:18px 0 6px;">
+              <div style="position:absolute;top:50%;left:50%;width:320px;height:320px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(140,160,100,0.18),transparent 66%);"></div>
+              <img src="{{ cat.photo }}" alt="{{ cat.name }}" loading="lazy" style="position:relative;width:300px;height:auto;filter:drop-shadow(0 20px 24px rgba(20,32,22,0.28));animation:kk-floatsoft 6.5s ease-in-out infinite;">
+            </div>
+          </sc-if>
+
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:15px;">
+            <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="5">
+              <div>
+                <div style="display:flex;align-items:baseline;gap:10px;">
+                  <span style="font:600 15.5px/1.3 'DM Sans',sans-serif;color:#1c3026;">{{ it.name }}</span>
+                  <span style="flex:1;border-bottom:1px dotted rgba(44,74,55,0.3);transform:translateY(-4px);"></span>
+                  <span style="font:600 15.5px/1 'Oswald',sans-serif;color:#a9783c;letter-spacing:0.03em;white-space:nowrap;">{{ it.price }}</span>
+                </div>
+                <sc-if value="{{ it.desc }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-family:'Fraunces',serif;font-style:italic;font-size:12.5px;color:#7c8a73;margin-top:3px;max-width:80%;">{{ it.desc }}</div>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-for>
+  </main>
+
+  <!-- ===================== BAND — DARI DAPUR ===================== -->
+  <section style="position:relative;height:440px;overflow:hidden;background:#16241c;">
+    <img src="img/dimsum.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kk-pan 20s ease-in-out infinite alternate;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0d1812 0%,rgba(13,24,18,0.25) 30%,rgba(13,24,18,0.4) 60%,#0d1812 100%);"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;padding:0 26px 42px;color:#f3ecdb;">
+      <div style="font:600 11px/1 'Oswald',sans-serif;letter-spacing:0.34em;color:#bcd0a8;text-transform:uppercase;">Dari Dapur</div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:46px;line-height:0.95;margin:12px 0 0;letter-spacing:-1px;">Gigitan kecil,<br>sepanjang hari</h2>
+      <div style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#cdd8bf;margin-top:14px;max-width:280px;line-height:1.45;">Camilan goreng renyah, roti panggang, nasi & mie — teman setia secangkir kopi.</div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOD ===================== -->
+  <main style="background:#efe6d0;">
+    <sc-for list="{{ food }}" as="cat" hint-placeholder-count="5">
+      <section data-sec="{{ cat.id }}" style="position:relative;overflow:hidden;padding:46px 24px 32px;border-top:1px solid rgba(44,74,55,0.10);">
+        <span style="position:absolute;top:-6px;right:14px;font-family:'Fraunces',serif;font-weight:600;font-size:120px;line-height:1;color:rgba(169,120,60,0.13);pointer-events:none;">{{ cat.num }}</span>
+        <div style="position:relative;z-index:2;">
+          <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:34px;line-height:1;margin:0;color:#16241c;letter-spacing:-0.5px;">{{ cat.name }}</h2>
+          <sc-if value="{{ cat.note }}" hint-placeholder-val="{{ false }}">
+            <p style="font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:#5e7a5f;margin:8px 0 0;">{{ cat.note }}</p>
+          </sc-if>
+
+          <sc-if value="{{ cat.photo }}" hint-placeholder-val="{{ false }}">
+            <div style="position:relative;display:flex;justify-content:center;margin:18px 0 6px;">
+              <div style="position:absolute;top:50%;left:50%;width:320px;height:320px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(140,160,100,0.16),transparent 66%);"></div>
+              <img src="{{ cat.photo }}" alt="{{ cat.name }}" loading="lazy" style="position:relative;width:300px;height:auto;filter:drop-shadow(0 20px 24px rgba(20,32,22,0.28));animation:kk-floatsoft 7s ease-in-out infinite;">
+            </div>
+          </sc-if>
+
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:15px;">
+            <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="6">
+              <div>
+                <div style="display:flex;align-items:baseline;gap:10px;">
+                  <span style="font:600 15.5px/1.3 'DM Sans',sans-serif;color:#1c3026;">{{ it.name }}</span>
+                  <span style="flex:1;border-bottom:1px dotted rgba(44,74,55,0.3);transform:translateY(-4px);"></span>
+                  <span style="font:600 15.5px/1 'Oswald',sans-serif;color:#a9783c;letter-spacing:0.03em;white-space:nowrap;">{{ it.price }}</span>
+                </div>
+                <sc-if value="{{ it.desc }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-family:'Fraunces',serif;font-style:italic;font-size:12.5px;color:#7c8a73;margin-top:3px;max-width:84%;">{{ it.desc }}</div>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-for>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="position:relative;background:radial-gradient(120% 90% at 50% 0%,#23402c 0%,#16241c 55%,#0d1812 100%);color:#e7e0cb;text-align:center;padding:56px 28px 46px;overflow:hidden;">
+    <div style="position:absolute;top:10%;left:50%;width:300px;height:300px;margin-left:-150px;border-radius:50%;background:radial-gradient(circle,rgba(150,180,110,0.16),transparent 65%);"></div>
+    <div style="position:relative;z-index:2;">
+      <img src="img/logo-cream.webp" alt="Kopi Kebun Bintaro" style="width:120px;height:120px;margin:0 auto 6px;">
+      <p style="font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:#bcc7ab;margin:8px auto 0;max-width:260px;line-height:1.5;">Sampai jumpa lagi di kebun.</p>
+      <div style="display:flex;align-items:center;gap:10px;justify-content:center;margin:24px 0 16px;">
+        <span style="width:5px;height:5px;border-radius:50%;background:#a9783c;"></span>
+        <span style="width:5px;height:5px;border-radius:50%;background:#a9783c;"></span>
+        <span style="width:5px;height:5px;border-radius:50%;background:#a9783c;"></span>
+      </div>
+      <div style="font:500 11px/1.7 'Oswald',sans-serif;letter-spacing:0.2em;text-transform:uppercase;color:#8ca07d;">@kopikebun.bintaro · Harga dalam ribuan Rupiah (K)</div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING FILTER ===================== -->
+  <button type="button" onClick="{{ toggleFilter }}" aria-label="Filter kategori" style="{{ fabStyle }}">
+    <span style="display:flex;flex-direction:column;gap:3px;align-items:flex-end;">
+      <span style="display:block;width:16px;height:2px;background:#f3ecdb;border-radius:2px;"></span>
+      <span style="display:block;width:11px;height:2px;background:#f3ecdb;border-radius:2px;"></span>
+      <span style="display:block;width:14px;height:2px;background:#f3ecdb;border-radius:2px;"></span>
+    </span>
+    <span style="font:600 11px/1 'Oswald',sans-serif;letter-spacing:0.16em;color:#f3ecdb;text-transform:uppercase;">Kategori</span>
+  </button>
+
+  <div onClick="{{ closeFilter }}" style="{{ backdropStyle }}"></div>
+
+  <div style="{{ sheetStyle }}">
+    <div style="width:44px;height:4px;border-radius:2px;background:rgba(243,236,219,0.3);margin:0 auto 16px;"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+      <span style="font-family:'Fraunces',serif;font-weight:500;font-size:23px;color:#f3ecdb;">Pilih Kategori</span>
+      <button type="button" onClick="{{ closeFilter }}" aria-label="Tutup" style="width:32px;height:32px;border-radius:50%;border:1px solid rgba(243,236,219,0.3);background:transparent;color:#f3ecdb;font-size:17px;line-height:1;cursor:pointer;">×</button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:9px;">
+      <sc-for list="{{ sheetItems }}" as="sp" hint-placeholder-count="13">
+        <button type="button" data-cat="{{ sp.id }}" onClick="{{ jump }}" style="{{ sp.pillStyle }}">{{ sp.name }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:480,&quot;height&quot;:920}}">
+class Component extends DCLogic {
+  state = { active: 'signature', filterOpen: false };
+
+  rawData() {
+    return [
+      { id:'signature', name:'Signature', nav:'Signature', items:[
+        { name:'Kopi Susu Gula Aren', price:'27K' },
+        { name:'Kopi Susu Kebun Pandan', price:'27K' },
+      ]},
+      { id:'coffee', name:'Coffee', nav:'Coffee', note:'Reguler / Grande', photo:'img/coffee.webp', items:[
+        { name:'Espresso', price:'18K' },
+        { name:'Americano / Long Black', desc:'Hot / Iced', price:'25K' },
+        { name:'Piccolo', desc:'Hot', price:'24K' },
+        { name:'Cappuccino / Latte', desc:'Hot / Iced', price:'28K' },
+        { name:'Latte Flavour', desc:'Caramel / Hazelnut / Vanilla', price:'30K' },
+        { name:'Café Latté Oatside', desc:'Hot / Iced', price:'28 / 38K' },
+        { name:'Moccachino', desc:'Hot / Iced', price:'29K' },
+        { name:'Sweet Baileys', desc:'Non-alcohol · Hot / Iced', price:'32K' },
+      ]},
+      { id:'manualbrew', name:'Manual Brew', nav:'Manual', note:'Tubruk · V60 · Vietnam Drip · Japanese', items:[
+        { name:'Reguler Beans', price:'25K' },
+        { name:'Guest Beans', price:'30K' },
+      ]},
+      { id:'coldbrew', name:'Cold Brew', nav:'Cold Brew', note:'Botol siap minum', photo:'img/coldbrew.webp', items:[
+        { name:'Mix Berry', price:'30K' },
+        { name:'Pomegranate', price:'30K' },
+        { name:'Lychee & Peach', price:'30K' },
+      ]},
+      { id:'bottle', name:'Bottle Package', nav:'Bottle', note:'500 ml / 1000 ml', items:[
+        { name:'Americano', price:'40 / 75K' },
+        { name:'Kopi Susu Gula Aren / Pandan', price:'45 / 85K' },
+        { name:'Chocolate / Taro / Red Velvet / Greentea', price:'50 / 90K' },
+      ]},
+      { id:'tea', name:'Tea', nav:'Tea', photo:'img/tea.webp', items:[
+        { name:'Sweet Tea', desc:'Hot / Iced', price:'10K' },
+        { name:'Lemon Tea', desc:'Hot / Iced', price:'22K' },
+        { name:'Lychee Tea', desc:'Hot / Iced', price:'24K' },
+        { name:'Lychee Tea Yakult', desc:'Hot / Iced', price:'27K' },
+      ]},
+      { id:'noncoffee', name:'Non-Coffee', nav:'Non-Coffee', items:[
+        { name:'Mineral Water', price:'10K' },
+        { name:'Coffee Beer', desc:'Non-alcohol · Iced', price:'20K' },
+        { name:'Avocado Latte', desc:'Hot / Iced', price:'26K' },
+        { name:'Taro Latte', desc:'Hot / Iced', price:'26K' },
+        { name:'Chocolate Latte', desc:'Hot / Iced', price:'27K' },
+        { name:'Red Velvet Latte', desc:'Hot / Iced', price:'27K' },
+        { name:'Strawberry Latte', desc:'Iced', price:'27K' },
+        { name:'Green Tea Latte', desc:'Hot / Iced', price:'29K' },
+      ]},
+      { id:'mocktail', name:'Mocktail', nav:'Mocktail', isNew:true, photo:'img/mocktail.webp', items:[
+        { name:'Mont Blanc', price:'32K' },
+        { name:'Berrycano', price:'29K' },
+        { name:'Black Lemongrass', price:'30K' },
+        { name:'Orange Deluxe', desc:'Iced', price:'25K' },
+        { name:'Black Sunkist', desc:'Iced', price:'25K' },
+        { name:'Green Dewata', desc:'Iced', price:'25K' },
+        { name:'Strawberry Sparkling', desc:'Iced', price:'26K' },
+        { name:'American Squash', desc:'Coffee Iced', price:'27K' },
+      ]},
+      { id:'hotsnack', name:'Hot Snack', nav:'Snack', photo:'img/bread.webp', items:[
+        { name:'Mix Platter', desc:'French fries, sosis & chicken karage', price:'35K' },
+        { name:'Singkong Renyah', desc:'Aren + cinnamon / Keju', price:'16–18K' },
+        { name:'Soft Cireng', desc:'Keju / Ayam / Ayam Pedas', price:'21K' },
+        { name:'Cireng Kebun', price:'19K' },
+        { name:'Ekado Udang', desc:'Goreng / Kukus', price:'20K' },
+        { name:'Roti Bakar / Kukus', desc:'Single topping · meses, keju, choco, tiramisu', price:'18–24K' },
+        { name:'Roti Double Topping', desc:'Keju + C. crunchy / Tiramisu', price:'27K' },
+        { name:'Rosang Bakar', desc:'Roti pisang · meses + keju', price:'20K' },
+        { name:'Pisang Goreng / Bakar', desc:'8 topping pilihan', price:'18–24K' },
+        { name:'Dimsum', desc:'Original, saus mentai, nori', price:'16–20K' },
+        { name:'Risoles Smoke Beef', desc:'Cheesy mayo', price:'18K' },
+        { name:'Risoles Rogout Ayam', price:'18K' },
+        { name:'Tahu Crunchy / Tahu Bakso', price:'18K' },
+        { name:'Pangsit Goreng Ayam', price:'18K' },
+        { name:'Dumpling Keju', price:'18K' },
+        { name:'French Fries', desc:'Original / BBQ', price:'23–24K' },
+        { name:'Sosis Bakar', desc:'+ French fries', price:'20 / 30K' },
+        { name:'Mositang', desc:'Mozarela sosis kentang', price:'17K' },
+        { name:'Churros', desc:'Cinnamon / cokelat', price:'22–24K' },
+        { name:'Donat Kampung', desc:'Cinnamon, choco, meses, keju', price:'22–27K' },
+        { name:'Siomay', desc:'+ Pangsit goreng / Telur', price:'25 / 28K' },
+        { name:'Gyoza', desc:'Original / Saus mentai', price:'25–27K' },
+      ]},
+      { id:'noodles', name:'Noodles', nav:'Noodles', photo:'img/noodles.webp', items:[
+        { name:'Mie Brutal', desc:'Goreng / Godok', price:'38K' },
+        { name:'Kwetiaw Brutal', desc:'Goreng / Godok', price:'38K' },
+        { name:'Inkar', desc:'Indomie katsu kari', price:'33K' },
+        { name:'Inlor', desc:'Indomie telor', price:'20K' },
+        { name:'Imbas', desc:'Indomie telor bakso', price:'22K' },
+        { name:'Internet', desc:'Indomie telor kornet keju', price:'25K' },
+      ]},
+      { id:'rice', name:'Rice & Nasi', nav:'Rice', photo:'img/rice.webp', items:[
+        { name:'Chicken Salted Egg', desc:'Telur + iced sweet tea', price:'33K' },
+        { name:'Ayam Goreng Kemangi', desc:'+ Nasi · tahu / tempe / tumis', price:'39 / 44K' },
+        { name:'Ayam Serundeng', desc:'+ Nasi · tahu / tempe / tumis', price:'35 / 40K' },
+        { name:'Bebek Sambal Matah', desc:'+ Nasi', price:'50K' },
+        { name:'Soto Betawi', desc:'+ Nasi', price:'38 / 45K' },
+        { name:'Rice Box Chicken Geprek', desc:'Sweet iced tea', price:'30 / 33K' },
+        { name:'Rice Box Chicken Teriyaki', desc:'Sweet iced tea', price:'30 / 33K' },
+        { name:'Chicken Karage', desc:'Nasi / French fries', price:'29 / 33K' },
+        { name:'Chicken Katsu', desc:'Saus kari / teriaki / mozarella', price:'29–35K' },
+        { name:'Sei Sapi', desc:'Ice sweet tea', price:'37K' },
+      ]},
+      { id:'burger', name:'Burger & Hotdog', nav:'Burger', items:[
+        { name:'Cheese Burger', desc:'+ French fries', price:'25 / 35K' },
+        { name:'Hotdog', desc:'+ French fries', price:'25 / 35K' },
+      ]},
+      { id:'extra', name:'Extra & Add-ons', nav:'Extra', items:[
+        { name:'Shot Coffee / Syrup', price:'5K' },
+        { name:'Simple Syrup, Aren, Pandan', price:'2–3K' },
+        { name:'Ice', price:'2K' },
+        { name:'Milk / Oatside', desc:'Hot / Cold', price:'10 / 15K' },
+        { name:'Mozarella / Nasi / Telur', price:'5K' },
+      ]},
+    ];
+  }
+
+  componentDidMount() {
+    // hero parallax
+    const hero = document.getElementById('kk-hero');
+    if (hero) {
+      this._layers = Array.from(hero.querySelectorAll('.kk-par'));
+      this._mm = (e) => {
+        const r = hero.getBoundingClientRect();
+        const nx = (e.clientX - r.left) / r.width - 0.5;
+        const ny = (e.clientY - r.top) / r.height - 0.5;
+        this._layers.forEach(l => {
+          const d = parseFloat(l.getAttribute('data-depth')) || 0;
+          l.style.transform = 'translate(' + (nx * d).toFixed(1) + 'px,' + (ny * d).toFixed(1) + 'px)';
+        });
+        hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      };
+      this._ml = () => { this._layers.forEach(l => l.style.transform = ''); };
+      hero.addEventListener('mousemove', this._mm);
+      hero.addEventListener('mouseleave', this._ml);
+    }
+
+    // scroll-spy
+    this._onScroll = () => {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = null;
+        const secs = document.querySelectorAll('[data-sec]');
+        const y = window.scrollY + 160;
+        let cur = this.state.active;
+        secs.forEach(s => { if (s.getBoundingClientRect().top + window.scrollY <= y) cur = s.getAttribute('data-sec'); });
+        if (cur !== this.state.active) {
+          this.setState({ active: cur });
+          const pill = document.querySelector('[data-cat="' + cur + '"]');
+          const nav = document.getElementById('kk-nav');
+          if (pill && nav) nav.scrollTo({ left: pill.offsetLeft - nav.clientWidth / 2 + pill.offsetWidth / 2, behavior: 'smooth' });
+        }
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    const hero = document.getElementById('kk-hero');
+    if (hero) { hero.removeEventListener('mousemove', this._mm); hero.removeEventListener('mouseleave', this._ml); }
+  }
+
+  go = (e) => {
+    const id = e.currentTarget.getAttribute('data-cat');
+    const el = document.querySelector('[data-sec="' + id + '"]');
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 116, behavior: 'smooth' });
+  };
+
+  toggleFilter = () => this.setState(s => ({ filterOpen: !s.filterOpen }));
+  closeFilter = () => this.setState({ filterOpen: false });
+  jump = (e) => { this.go(e); this.setState({ filterOpen: false }); };
+
+  renderVals() {
+    const active = this.state.active;
+    const raw = this.rawData();
+    const withNum = raw.map((c, i) => ({ ...c, num: String(i + 1).padStart(2, '0') }));
+    const signature = withNum.find(c => c.id === 'signature');
+    const drinkIds = ['coffee','manualbrew','coldbrew','bottle','tea','noncoffee','mocktail'];
+    const foodIds = ['hotsnack','noodles','rice','burger','extra'];
+    const drinks = withNum.filter(c => drinkIds.includes(c.id));
+    const food = withNum.filter(c => foodIds.includes(c.id));
+
+    const basePill = { flex:'0 0 auto', padding:'8px 14px', borderRadius:'999px', border:'1px solid rgba(44,74,55,0.28)', background:'transparent', color:'#2c4a37', fontFamily:"'Oswald', sans-serif", fontWeight:600, fontSize:'12px', lineHeight:1, letterSpacing:'0.08em', textTransform:'uppercase', cursor:'pointer', whiteSpace:'nowrap', transition:'all .25s ease' };
+    const activePill = { ...basePill, background:'#16241c', color:'#f3ecdb', borderColor:'#16241c' };
+    const navItems = withNum.map(c => ({ id: c.id, name: c.nav, pillStyle: c.id === active ? activePill : basePill }));
+
+    const filterOpen = this.state.filterOpen;
+    const fabStyle = { position:'fixed', right:'max(16px, calc(50vw - 244px))', bottom:'22px', zIndex:82, display: filterOpen ? 'none' : 'flex', alignItems:'center', gap:'10px', padding:'12px 17px', borderRadius:'999px', background:'#16241c', border:'1px solid rgba(243,236,219,0.18)', boxShadow:'0 10px 26px rgba(13,24,18,0.42)', cursor:'pointer' };
+    const backdropStyle = { position:'fixed', inset:0, background:'rgba(13,24,18,0.55)', backdropFilter:'blur(2px)', zIndex:80, opacity: filterOpen ? 1 : 0, pointerEvents: filterOpen ? 'auto' : 'none', transition:'opacity .3s ease' };
+    const sheetStyle = { position:'fixed', left:'50%', bottom:0, width:'100%', maxWidth:'520px', transform: filterOpen ? 'translate(-50%,0)' : 'translate(-50%,100%)', zIndex:83, background:'#16241c', borderRadius:'20px 20px 0 0', padding:'14px 22px 30px', boxShadow:'0 -16px 40px rgba(13,24,18,0.5)', transition:'transform .35s cubic-bezier(.2,.7,.3,1)', maxHeight:'72vh', overflowY:'auto' };
+    const sheetBase = { flex:'0 0 auto', padding:'9px 15px', borderRadius:'999px', border:'1px solid rgba(243,236,219,0.25)', background:'transparent', color:'#e7e0cb', fontFamily:"'Oswald', sans-serif", fontWeight:600, fontSize:'12px', lineHeight:1, letterSpacing:'0.08em', textTransform:'uppercase', cursor:'pointer', whiteSpace:'nowrap', transition:'all .2s ease' };
+    const sheetActive = { ...sheetBase, background:'#a9783c', color:'#16241c', borderColor:'#a9783c' };
+    const sheetItems = withNum.map(c => ({ id: c.id, name: c.name, pillStyle: c.id === active ? sheetActive : sheetBase }));
+
+    const marquee = ['Kopi Susu Gula Aren','Kebun Pandan','V60 Manual Brew','Cold Brew Lychee','Avocado Latte','Pisang Goreng','Dimsum Mentai','Mie Brutal','Soto Betawi','Churros','Green Tea Latte','Sei Sapi'].join('   \u2726   ') + '   \u2726   ';
+
+    return {
+      navItems,
+      go: this.go,
+      marquee,
+      signatureItems: signature ? signature.items : [],
+      drinks,
+      food,
+      toggleFilter: this.toggleFilter,
+      closeFilter: this.closeFilter,
+      jump: this.jump,
+      fabStyle,
+      backdropStyle,
+      sheetStyle,
+      sheetItems,
+    };
+  }
+}
+</script>
+</body>
+</html>

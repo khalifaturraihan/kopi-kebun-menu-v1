@@ -1,0 +1,44 @@
+.wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(243, 236, 219, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(44, 74, 55, 0.14);
+}
+
+.nav {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 11px 16px;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(44, 74, 55, 0.28);
+  background: transparent;
+  color: #2c4a37;
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.pillActive {
+  background: #2c5a3c;
+  color: #f3ecdb;
+  border-color: #2c5a3c;
+}
