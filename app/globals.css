@@ -95,6 +95,21 @@ img {
 .anim-drink-2 { animation: kk-fade 13.5s ease-in-out infinite -4.5s, kk-float 6s ease-in-out infinite; }
 .anim-drink-3 { animation: kk-fade 13.5s ease-in-out infinite -9s, kk-float 6s ease-in-out infinite; }
 
+/*
+ * GSAP scroll-reveal initial state. Items start hidden so GSAP can fade them
+ * in on scroll without a flash of visible-then-hidden content. If motion is
+ * reduced, they are shown immediately (ScrollAnimations creates no tweens).
+ */
+[data-reveal-item] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal-item] {
+    opacity: 1 !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .anim-marquee,
   .anim-glow,

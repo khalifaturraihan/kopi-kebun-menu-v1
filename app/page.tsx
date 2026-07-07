@@ -6,12 +6,14 @@ import MenuSection from "@/components/MenuSection";
 import PhotoBand from "@/components/PhotoBand";
 import Footer from "@/components/Footer";
 import CategoryFilter from "@/components/CategoryFilter";
+import ScrollAnimations from "@/components/ScrollAnimations";
 import { drinks, food } from "@/lib/menu";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <div className={styles.column}>
+      <ScrollAnimations />
       <Hero />
       <Marquee />
       <StickyNav />

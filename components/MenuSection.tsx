@@ -12,18 +12,25 @@ export default function MenuSection({ category, variant }: Props) {
 
   return (
     <section data-sec={category.id} className={styles.section}>
-      <span className={`${styles.num} ${isFood ? styles.numFood : ""}`}>
+      <span
+        className={`${styles.num} ${isFood ? styles.numFood : ""}`}
+        data-parallax
+      >
         {category.num}
       </span>
-      <div className={styles.content}>
-        <div className={styles.titleRow}>
+      <div className={styles.content} data-reveal>
+        <div className={styles.titleRow} data-reveal-item>
           <h2 className={styles.title}>{category.name}</h2>
           {category.isNew && <span className={styles.badge}>Baru</span>}
         </div>
-        {category.note && <p className={styles.note}>{category.note}</p>}
+        {category.note && (
+          <p className={styles.note} data-reveal-item>
+            {category.note}
+          </p>
+        )}
 
         {category.photo && (
-          <div className={styles.photoWrap}>
+          <div className={styles.photoWrap} data-reveal-item>
             <div className={`${styles.halo} ${isFood ? styles.haloFood : ""}`} />
             <Image
               src={category.photo}
@@ -36,7 +43,7 @@ export default function MenuSection({ category, variant }: Props) {
 
         <div className={styles.items}>
           {category.items.map((it) => (
-            <div key={it.name}>
+            <div key={it.name} data-reveal-item>
               <div className={styles.row}>
                 <span className={styles.name}>{it.name}</span>
                 <span className={styles.leader} />

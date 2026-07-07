@@ -58,7 +58,7 @@ export default function Hero() {
           <div className={`${styles.steam} ${styles.steam2} anim-steam-2`} />
           <img src="/img/logo-bean.webp" alt="" className={`${styles.bean} anim-breathe`} />
         </div>
-        <div className={styles.eyebrow}>Est · Kebun Kota</div>
+        <div className={styles.eyebrow}>Est 2020</div>
         <div className={styles.wordmark}>
           Kopi
           <br />

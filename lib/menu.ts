@@ -31,8 +31,8 @@ const rawData: Category[] = [
     { name: "Americano / Long Black", desc: "Hot / Iced", price: "25K" },
     { name: "Piccolo", desc: "Hot", price: "24K" },
     { name: "Cappuccino / Latte", desc: "Hot / Iced", price: "28K" },
-    { name: "Latte Flavour", desc: "Caramel / Hazelnut / Vanilla", price: "30K" },
-    { name: "Café Latté Oatside", desc: "Hot / Iced", price: "28 / 38K" },
+    { name: "Cappuccino / Latte Flavour", desc: "Caramel / Hazelnut / Vanilla", price: "30K" },
+    { name: "Café Latté Oatside", desc: "Reguler / Oatside", price: "28 / 38K" },
     { name: "Moccachino", desc: "Hot / Iced", price: "29K" },
     { name: "Sweet Baileys", desc: "Non-alcohol · Hot / Iced", price: "32K" },
   ]},
@@ -48,7 +48,7 @@ const rawData: Category[] = [
   { id: "bottle", name: "Bottle Package", nav: "Bottle", note: "500 ml / 1000 ml", items: [
     { name: "Americano", price: "40 / 75K" },
     { name: "Kopi Susu Gula Aren / Pandan", price: "45 / 85K" },
-    { name: "Chocolate / Taro / Red Velvet / Greentea", price: "50 / 90K" },
+    { name: "Chocolate / Taro / Red Velvet / Matcha", price: "50 / 90K" },
   ]},
   { id: "tea", name: "Tea", nav: "Tea", photo: teaPhoto, items: [
     { name: "Sweet Tea", desc: "Hot / Iced", price: "10K" },
@@ -64,7 +64,7 @@ const rawData: Category[] = [
     { name: "Chocolate Latte", desc: "Hot / Iced", price: "27K" },
     { name: "Red Velvet Latte", desc: "Hot / Iced", price: "27K" },
     { name: "Strawberry Latte", desc: "Iced", price: "27K" },
-    { name: "Green Tea Latte", desc: "Hot / Iced", price: "29K" },
+    { name: "Matcha Latte", desc: "Hot / Iced", price: "29K" },
   ]},
   { id: "mocktail", name: "Mocktail", nav: "Mocktail", isNew: true, photo: mocktailPhoto, items: [
     { name: "Mont Blanc", price: "32K" },
@@ -157,6 +157,6 @@ export const marqueeText =
     "Mie Brutal",
     "Soto Betawi",
     "Churros",
-    "Green Tea Latte",
+    "Matcha Latte",
     "Sei Sapi",
   ].join("   ✦   ") + "   ✦   ";

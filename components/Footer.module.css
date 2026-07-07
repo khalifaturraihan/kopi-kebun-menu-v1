@@ -63,3 +63,15 @@
   text-transform: uppercase;
   color: #8ca07d;
 }
+
+.handleLink {
+  color: #cbb489;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.handleLink:hover {
+  color: #e0b27a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
