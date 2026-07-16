@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 import coffeePhoto from "@/public/img/coffee.webp";
 import coldbrewPhoto from "@/public/img/coldbrew.webp";
-import teaPhoto from "@/public/img/tea.webp";
+import teaPhoto from "@/public/img/tea-cutout.png";
 import mocktailPhoto from "@/public/img/mocktail.webp";
 import breadPhoto from "@/public/img/bread.webp";
 import noodlesPhoto from "@/public/img/noodles.webp";

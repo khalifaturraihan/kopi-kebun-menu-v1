@@ -35,8 +35,10 @@ export default function MenuSection({ category, variant }: Props) {
             <Image
               src={category.photo}
               alt={category.name}
-              className={`${styles.photo} ${isFood ? "anim-floatsoft-7" : "anim-floatsoft"}`}
-              sizes="300px"
+              className={`${styles.photo} ${category.id === "tea" ? styles.photoTea : ""} ${
+                isFood ? "anim-floatsoft-7" : "anim-floatsoft"
+              }`}
+              sizes="350px"
             />
           </div>
         )}

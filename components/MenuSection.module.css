@@ -92,6 +92,13 @@
   filter: drop-shadow(0 20px 24px rgba(20, 32, 22, 0.28));
 }
 
+/* The tea photo is a wider, more zoomed-out shot, so its glasses read smaller
+   at 300px. Show it a touch larger; capped to 100% so it never overflows the
+   section (its transparent padding absorbs the difference on mobile). */
+.photoTea {
+  width: min(348px, 100%);
+}
+
 .items {
   margin-top: 20px;
   display: flex;
