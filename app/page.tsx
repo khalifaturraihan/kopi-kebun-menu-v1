@@ -7,12 +7,14 @@ import PhotoBand from "@/components/PhotoBand";
 import Footer from "@/components/Footer";
 import CategoryFilter from "@/components/CategoryFilter";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import SplashScreen from "@/components/SplashScreen";
 import { drinks, food } from "@/lib/menu";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <div className={styles.column}>
+      <SplashScreen />
       <ScrollAnimations />
       <Hero />
       <Marquee />

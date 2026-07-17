@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import LogoCoin3D from "./LogoCoin3D";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -71,9 +72,7 @@ export default function Hero() {
       </div>
 
       <div data-depth="40" className={styles.drinkWrap}>
-        <img src="/img/signature.webp" alt="" className={`${styles.drink} anim-drink-1`} />
-        <img src="/img/mocktail.webp" alt="" className={`${styles.drink} anim-drink-2`} />
-        <img src="/img/coffeelatte.webp" alt="" className={`${styles.drink} anim-drink-3`} />
+        <LogoCoin3D />
         <div className={styles.drinkShadow} />
       </div>
 

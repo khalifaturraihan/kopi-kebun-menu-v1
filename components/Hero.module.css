@@ -179,17 +179,6 @@
   margin-left: -160px;
 }
 
-.drink {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
-  opacity: 0;
-  filter: drop-shadow(0 24px 26px rgba(0, 0, 0, 0.5));
-}
-
 .drinkShadow {
   position: absolute;
   bottom: -8px;

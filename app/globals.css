@@ -32,11 +32,6 @@ img {
   100% { transform: translateY(-95px) scaleX(1.8); opacity: 0; }
 }
 
-@keyframes kk-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-16px); }
-}
-
 @keyframes kk-floatsoft {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-11px); }
@@ -62,12 +57,6 @@ img {
   50% { transform: translateY(6px); opacity: 1; }
 }
 
-@keyframes kk-fade {
-  0%, 100% { opacity: 0; }
-  8%, 42% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
 /*
  * Animation utility classes.
  * Keyframes must be referenced from global (non-module) CSS: CSS Modules
@@ -90,10 +79,6 @@ img {
 
 .anim-steam-1 { animation: kk-steam 4s ease-out infinite; }
 .anim-steam-2 { animation: kk-steam 4.6s ease-out infinite 1.2s; }
-
-.anim-drink-1 { animation: kk-fade 13.5s ease-in-out infinite, kk-float 6s ease-in-out infinite; }
-.anim-drink-2 { animation: kk-fade 13.5s ease-in-out infinite -4.5s, kk-float 6s ease-in-out infinite; }
-.anim-drink-3 { animation: kk-fade 13.5s ease-in-out infinite -9s, kk-float 6s ease-in-out infinite; }
 
 /*
  * GSAP scroll-reveal initial state. Items start hidden so GSAP can fade them
@@ -123,16 +108,11 @@ img {
   .anim-leaf-3,
   .anim-leaf-4,
   .anim-steam-1,
-  .anim-steam-2,
-  .anim-drink-1,
-  .anim-drink-2,
-  .anim-drink-3 {
+  .anim-steam-2 {
     animation: none !important;
   }
 
-  /* Keep content legible without motion: show the first hero drink, hide the
-     leaf particles that would otherwise freeze mid-air. */
-  .anim-drink-1 { opacity: 1 !important; }
+  /* Hide the leaf particles that would otherwise freeze mid-air. */
   .anim-leaf-1,
   .anim-leaf-2,
   .anim-leaf-3,
