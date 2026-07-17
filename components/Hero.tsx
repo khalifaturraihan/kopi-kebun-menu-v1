@@ -53,27 +53,29 @@ export default function Hero() {
         <span className={styles.topLabel}>Bintaro</span>
       </div>
 
-      <div data-depth="-10" className={styles.center}>
-        <div className={styles.beanWrap}>
-          <div className={`${styles.steam} ${styles.steam1} anim-steam-1`} />
-          <div className={`${styles.steam} ${styles.steam2} anim-steam-2`} />
-          <img src="/img/logo-bean.webp" alt="" className={`${styles.bean} anim-breathe`} />
+      <div className={styles.content}>
+        <div data-depth="-10" className={styles.center}>
+          <div className={styles.beanWrap}>
+            <div className={`${styles.steam} ${styles.steam1} anim-steam-1`} />
+            <div className={`${styles.steam} ${styles.steam2} anim-steam-2`} />
+            <img src="/img/logo-bean.webp" alt="" className={`${styles.bean} anim-breathe`} />
+          </div>
+          <div className={styles.eyebrow}>Est 2020</div>
+          <div className={styles.wordmark}>
+            Kopi
+            <br />
+            Kebun
+          </div>
+          <div className={styles.tagline}>
+            Secangkir tenang di tengah kebun kota — diseduh perlahan, dinikmati tanpa
+            terburu.
+          </div>
         </div>
-        <div className={styles.eyebrow}>Est 2020</div>
-        <div className={styles.wordmark}>
-          Kopi
-          <br />
-          Kebun
-        </div>
-        <div className={styles.tagline}>
-          Secangkir tenang di tengah kebun kota — diseduh perlahan, dinikmati tanpa
-          terburu.
-        </div>
-      </div>
 
-      <div data-depth="40" className={styles.drinkWrap}>
-        <LogoCoin3D />
-        <div className={styles.drinkShadow} />
+        <div data-depth="40" className={styles.drinkWrap}>
+          <LogoCoin3D />
+          <div className={styles.drinkShadow} />
+        </div>
       </div>
 
       <div className={`${styles.cue} anim-bob`}>

@@ -108,9 +108,22 @@ export default function LogoCoin3D() {
       blending: THREE.AdditiveBlending,
     });
     const halo = new THREE.Sprite(haloMat);
-    halo.scale.setScalar(3.4);
-    halo.position.set(0, BASE_Y, -1.2);
+    halo.position.z = -1.2;
     scene.add(halo);
+
+    // Fit-to-container: phone screens give this canvas all kinds of aspect
+    // ratios, so scale the whole coin down whenever the camera frustum gets
+    // too narrow or too short for it (diameter 2.6 + float + BASE_Y offset).
+    let fitScale = 1;
+    const applyFit = () => {
+      const visH = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(34 / 2));
+      const visW = visH * camera.aspect;
+      fitScale = Math.min(1, visW / 3.2, visH / 3.9);
+      coin.scale.setScalar(fitScale);
+      halo.scale.setScalar(3.4 * fitScale);
+      halo.position.y = BASE_Y * fitScale;
+    };
+    applyFit();
 
     // Floating cream specks, like dust catching the light above a cup.
     const SPECKS = 42;
@@ -157,7 +170,7 @@ export default function LogoCoin3D() {
       coin.rotation.y = t * 0.55;
       coin.rotation.x += (targetTiltX - coin.rotation.x) * 0.05;
       coin.rotation.z += (targetTiltZ - coin.rotation.z) * 0.05;
-      coin.position.y = BASE_Y + Math.sin(t * 0.9) * 0.12;
+      coin.position.y = (BASE_Y + Math.sin(t * 0.9) * 0.12) * fitScale;
 
       const pos = speckGeo.getAttribute("position") as THREE.BufferAttribute;
       for (let i = 0; i < SPECKS; i++) {
@@ -175,7 +188,7 @@ export default function LogoCoin3D() {
     if (reduce) {
       // Static pose, single frame (re-rendered when the texture arrives).
       coin.rotation.y = -0.35;
-      coin.position.y = BASE_Y;
+      coin.position.y = BASE_Y * fitScale;
       renderer.render(scene, camera);
     } else {
       raf = requestAnimationFrame(tick);
@@ -188,7 +201,11 @@ export default function LogoCoin3D() {
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
-      if (reduce) renderer.render(scene, camera);
+      applyFit();
+      if (reduce) {
+        coin.position.y = BASE_Y * fitScale;
+        renderer.render(scene, camera);
+      }
     };
     const ro = new ResizeObserver(onResize);
     ro.observe(mount);

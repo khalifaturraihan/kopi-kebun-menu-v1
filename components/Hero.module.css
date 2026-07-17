@@ -3,7 +3,27 @@
   height: 100vh;
   min-height: 660px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background: radial-gradient(130% 92% at 50% 6%, #418a59 0%, #357049 50%, #1e3b28 100%);
+}
+
+/*
+ * Normal-flow column for text + coin. The two blocks used to be absolutely
+ * positioned (text from the top, coin from the bottom) and collided on short
+ * phone screens; as flex children they can never overlap — the coin just
+ * gets whatever height remains.
+ */
+.content {
+  position: relative;
+  z-index: 4;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* clear the absolute topBar above and the scroll cue below */
+  padding: clamp(76px, 10vh, 100px) 0 74px;
 }
 
 .glow {
@@ -96,11 +116,7 @@
 }
 
 .center {
-  position: absolute;
-  top: 11%;
-  left: 0;
-  right: 0;
-  z-index: 4;
+  flex: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,13 +186,19 @@
   line-height: 1.4;
 }
 
+/*
+ * The coin's own box: takes the height left over below the text (clamped),
+ * with an explicit gap to the tagline. Width follows the phone screen; the
+ * canvas inside always fills this box and the 3D coin scales itself to fit
+ * whatever aspect ratio results.
+ */
 .drinkWrap {
-  position: absolute;
-  bottom: 78px;
-  left: 50%;
-  width: 320px;
-  height: 420px;
-  margin-left: -160px;
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 150px;
+  max-height: 420px;
+  width: min(320px, 80vw);
+  margin-top: clamp(18px, 3.5vh, 34px);
 }
 
 .drinkShadow {
